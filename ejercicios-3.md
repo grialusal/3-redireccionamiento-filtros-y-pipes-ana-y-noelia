@@ -17,6 +17,21 @@ Trata ahora de ordenar este fichero de acuerdo a los siguientes criterios:
 3. Usando a la vez la tercera y la segunda columna (en este orden de prioridad). Consulta el manual para ver la opción -k. 
 
 ### Respuesta ejercicio 1
+ Primero creamos un nuevo fichero llamado `gene-2-desordenado.bed` que contenía los datos desordenados del fichero `gene-2.bed`. Para esto usamos el comando:
+ 
+ `sort -R gene-2.bed > gene-2-desordenado.bed`
+ 
+![gen desordenado](https://user-images.githubusercontent.com/92113066/139421879-437f94a7-6f5f-46c6-a967-fc79c33cfdc5.png)
+
+**1.** Para ordenar los ficheros sin cortar los elementos empleamos la orden `sort -n gene-2-desordenado.bed` que nos ordena los elementos de cada columna de menor a mayor.
+
+![sort1](https://user-images.githubusercontent.com/92113066/139426601-6f373dca-a596-4b07-9712-eeae8d3e9d0a.png)
+
+**2.** En este caso empleamos el comando `sort -nr gene-2-desordenado.bed` que nos ordena las columas por orden descendiente.
+
+![sort2](https://user-images.githubusercontent.com/92113066/139427791-d7baad27-df76-42b2-9159-9a1780c45edd.png)
+
+**3.** 
 
 ## Ejercicio 2
 
