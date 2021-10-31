@@ -24,6 +24,22 @@ Cuáles son y cuántos tipos distintos de "features" hay en `Drosophila_melanoga
 
 ### Respuesta ejercicio 2
 
+Primeramente, ejecutaremos `cat` sobre el archivo que nos interesa ver por pantalla para poder trabajar con él. Eliminaremos los metadatos mediante el comando `grep -v "^#"` y seleccionaremos la columna que nos interesa, la que contiene "features", mediante `cut -f3`. Ordenamos los datos con `sort` para ejecutar posteriormente `uniq -c`y conocer así los diferentes tipos de features existentes. Nuestro pipeline quedaría así: 
+
+`cat Drosophila_melanogaster.BDGP6.28.102.gtf | grep -v "^#" | cut -f3 | sort | uniq -c`
+
+Posteriormente, podemos ejecutar `wc -l` para contar el número de features.
+
+![features Drosophila](https://user-images.githubusercontent.com/92091175/139582871-313cbd9b-f1f7-4e34-b38c-da09a706362b.png)
+
+Para trabajar con el archivo `Homo_sapiens.GRCh38.102.gtf.gz` podemos utilizar el mismo pipeline, modificando `cat` por `zcat`:
+
+`zcat Homo_sapiens.GRCh38.102.gtf.gz | grep -v "^#" | cut -f3 | sort | uniq -c`
+
+
+![features homo sapiens](https://user-images.githubusercontent.com/92091175/139583070-67c8e6fb-38fe-4338-962b-46d1b8a98473.png)
+
+
 
 ## Ejercicio 3
 
