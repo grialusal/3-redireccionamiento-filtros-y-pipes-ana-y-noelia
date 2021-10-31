@@ -47,6 +47,12 @@ Recuerdas `covid-samples.fasta`? Localízalo en tu HOME, y extrae, usando un pip
 
 ### Respuesta ejercicio 3
 
+Para extraer los nombres de las secuencias ejecutaremos `grep "^>"`, obteniendo así las filas que empiecen por '>'. Seleccionaremos después el número de caracteres que ocupa la referencia de las secuencias mediante `cut -c 1-11` y ordenaremos los resultados volcándolos a un archivo de texto mediante la orden `sort > [ARCHIVO.TXT]`
+
+`grep "^>" covid-samples.fasta | cut -c 1-11 | sort > ../negido/3-redireccionamiento-filtros-y-pipes-ana-y-noelia/covid-seq-names.txt`
+
+![covid seq names](https://user-images.githubusercontent.com/92091175/139587940-c5b29e5b-e4bb-4d33-8a4f-781dc532b29c.png)
+
 
 ## Ejercicio 4
 
