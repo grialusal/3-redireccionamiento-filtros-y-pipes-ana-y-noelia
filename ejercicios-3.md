@@ -38,7 +38,9 @@ Encuentra, usando una sola línea, el número de usuarias diferentes que tienen 
 
 ### Respuesta ejercicio 4
 
+Para obtener la respuesta utilizando una sola línea hay que hacer uso de pipelines. Nos situamos en '/home' y ejecutamos `ls -1` para que nos de una lista, en una sola columna, de los directos existentes. Posteriormente, añadimos `sort` y `uniq -c` para que nos cuente si hubiera algún directorio con un nombre repetido, y `wc -l` para saber el número de directorios existentes.
 
+`ls -1 | sort | uniq -c | wc -l`
 
-
+Nos aparecen 38 directorios, pero no se distinguen cuáles pertenecen a los usuarios.
 
