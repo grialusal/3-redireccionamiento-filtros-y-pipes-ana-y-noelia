@@ -18,6 +18,11 @@ Trata ahora de ordenar este fichero de acuerdo a los siguientes criterios:
 
 ### Respuesta ejercicio 1
 
+**3.** La opción `-k`, seguida del número correspondiente al campo que queremos ordenar, permite empezar a ordenar por la columna que deseemos. Para ordenar nuestro archivo fijándonos en la tercera y segunda columna, la orden a ejecutar sería: `sort -k3,3 -k2,2 -n gene-2-desordenado.bed`. Con esto, le estamos pidiendo que nos ordene "empezando y terminando" por la 3ª columna, y posteriormente, "empezando y terminando" por la segunda, razón por la que indicamos dos veces el mismo campo separado por una coma.
+
+![orden por tercera y segunda columna](https://user-images.githubusercontent.com/92091175/139713578-cfe6435b-01d6-456d-9749-a63610fb0ba2.png)
+
+
 ## Ejercicio 2
 
 Cuáles son y cuántos tipos distintos de "features" hay en `Drosophila_melanogaster.BDGP6.28.102.gtf` y en `Homo_sapiens.GRCh38.102.gtf.gz`? Nota: para trabajar con ficheros .gunzip sin descomprimir puedes usar `zcat`.
