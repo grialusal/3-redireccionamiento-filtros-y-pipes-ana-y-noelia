@@ -46,6 +46,11 @@ Recuerdas `covid-samples.fasta`? Localízalo en tu HOME, y extrae, usando un pip
 
 ### Respuesta ejercicio 3
 
+Para extraer los nombres de las secuencias empleamos el pipeline `cat covid-samples.fasta | grep "^>"`.
+
+![grep1](https://user-images.githubusercontent.com/92113066/139668793-6043ea9f-53d6-4a92-b550-e3dec9bfdca8.png)
+
+
 
 ## Ejercicio 4
 
