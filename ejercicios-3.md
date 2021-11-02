@@ -31,7 +31,6 @@ Trata ahora de ordenar este fichero de acuerdo a los siguientes criterios:
 
 ![sort2](https://user-images.githubusercontent.com/92113066/139427791-d7baad27-df76-42b2-9159-9a1780c45edd.png)
 
-**3.** 
 
 **3.** La opción `-k`, seguida del número correspondiente al campo que queremos ordenar, permite empezar a ordenar por la columna que deseemos. Para ordenar nuestro archivo fijándonos en la tercera y segunda columna, la orden a ejecutar sería: `sort -k3,3 -k2,2 -n gene-2-desordenado.bed`. Con esto, le estamos pidiendo que nos ordene "empezando y terminando" por la 3ª columna, y posteriormente, "empezando y terminando" por la segunda, razón por la que indicamos dos veces el mismo campo separado por una coma.
 
@@ -66,6 +65,17 @@ Para trabajar con el archivo `Homo_sapiens.GRCh38.102.gtf.gz` podemos utilizar e
 Recuerdas `covid-samples.fasta`? Localízalo en tu HOME, y extrae, usando un pipeline, los nombres de las secuencias contenidas en este fichero. Luego saca la primera palabra de cada una, ordénalas y guárdalas en un fichero `covid-seq-names.txt`.
 
 ### Respuesta ejercicio 3
+
+Para extraer los nombres de las secuencias empleamos el pipeline `cat covid-samples.fasta | grep "^>"`.
+
+![grep1](https://user-images.githubusercontent.com/92113066/139668793-6043ea9f-53d6-4a92-b550-e3dec9bfdca8.png)
+
+Obtenemos así las filas que empiecen por '>', esto es, los nombres y datos de las secuencias. Seleccionamos después el número de caracteres que ocupa la referencia de las secuencias mediante `cut -c 1-11` y ordenamos los resultados volcándolos a un archivo de texto mediante la orden `sort > [ARCHIVO.TXT]`.
+En una sola línea, nuestro pipeline sería:
+
+`grep "^>" covid-samples.fasta | cut -c 1-11 | sort > ../negido/3-redireccionamiento-filtros-y-pipes-ana-y-noelia/covid-seq-names.txt`
+
+![covid seq names](https://user-images.githubusercontent.com/92091175/139587940-c5b29e5b-e4bb-4d33-8a4f-781dc532b29c.png)
 
 
 
