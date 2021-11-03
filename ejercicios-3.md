@@ -23,7 +23,7 @@ Trata ahora de ordenar este fichero de acuerdo a los siguientes criterios:
  
 ![gen desordenado](https://user-images.githubusercontent.com/92113066/139421879-437f94a7-6f5f-46c6-a967-fc79c33cfdc5.png)
 
- La opción `-k`, seguida del número correspondiente al campo que queremos ordenar, permite empezar a ordenar por la columna que deseemos. Para ordenar nuestro archivo fijándonos en la tercera y segunda columna, en orden descendiente y sin cortar los elementos, la orden a ejecutar sería: `sort -nr -k3,3 -k2,2 -n gene-2-desordenado.bed`. Con esto, le estamos pidiendo que nos ordene "empezando y terminando" por la 3ª columna, y posteriormente, "empezando y terminando" por la segunda, razón por la que indicamos dos veces el mismo campo separado por una coma.
+ La opción `-k`, seguida del número correspondiente al campo que queremos ordenar, permite empezar a ordenar por la columna que deseemos. Para ordenar nuestro archivo fijándonos en la tercera y segunda columna, en orden descendiente y sin cortar los elementos, la orden a ejecutar sería: `sort -nr -k3,3 -k2,2 gene-2-desordenado.bed`. Con esto, le estamos pidiendo que nos ordene "empezando y terminando" por la 3ª columna, y posteriormente, "empezando y terminando" por la segunda, razón por la que indicamos dos veces el mismo campo separado por una coma.
 
 ![sort 3](https://user-images.githubusercontent.com/92113066/140031772-58c93deb-ca7f-4efd-a53e-99fb10c3f8bd.png)
 
