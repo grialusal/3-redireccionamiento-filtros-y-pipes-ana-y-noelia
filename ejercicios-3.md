@@ -76,9 +76,17 @@ Encuentra, usando una sola línea, el número de usuarias diferentes que tienen 
 
 ### Respuesta ejercicio 4
 
-Para obtener la respuesta utilizando una sola línea hay que hacer uso de pipelines. Nos situamos en '/home' y ejecutamos `ls -1` para que nos de una lista, en una sola columna, de los directos existentes. Posteriormente, añadimos `sort` y `uniq -c` para que nos cuente si hubiera algún directorio con un nombre repetido, y `wc -l` para saber el número de directorios existentes.
+Para obtener la respuesta utilizando una sola línea hay que hacer uso de pipelines. Nos situamos en '/home' y ejecutamos `ls -l`. Seleccionamos el rango de caracteres que ocupa la columna que nos interesa, en este caso es la tercera y comprende desde el caracter 14 hasta el 34*¹. Posteriormente, añadimos `sort` y `uniq -c` para que nos cuente si hubiera algún nombre repetido.
 
-`ls -1 | sort | uniq -c | wc -l`
+![numero de usuarios](https://user-images.githubusercontent.com/92091175/140276095-c21de86b-c401-4bcc-9ea7-7e65e72f3822.png)
 
-Nos aparecen 38 directorios, pero no se distinguen cuáles pertenecen a los usuarios.
+Podemos añadir  después `wc -l` para saber el número de directorios existentes.
+
+`ls -l | cut -c 14-34 | sort | uniq -c | wc -l`
+
+Nos aparecen 35 usuarios diferentes.
+
+*¹ Otra modo de seleccionar la tercera columna sería utilizar awk, de manera que el pipeline tendría esta estructura: 
+`ls -l | awk '{print $3}' | sort | uniq -c`. Se obtiene el mismo resultado.
+
 
