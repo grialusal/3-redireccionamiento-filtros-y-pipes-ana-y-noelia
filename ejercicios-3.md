@@ -76,17 +76,17 @@ Encuentra, usando una sola línea, el número de usuarias diferentes que tienen 
 
 ### Respuesta ejercicio 4
 
-Para obtener la respuesta utilizando una sola línea hay que hacer uso de pipelines. Nos situamos en '/home' y ejecutamos `ls -l`. Seleccionamos el rango de caracteres que ocupa la columna que nos interesa, en este caso es la tercera y comprende desde el caracter 14 hasta el 34*¹. Posteriormente, añadimos `sort` y `uniq -c` para que nos cuente si hubiera algún nombre repetido.
+Para obtener la respuesta utilizando una sola línea hay que hacer uso de pipelines. Nos situamos en '/home' y ejecutamos `ls -l` y `tail -n+2` para saltarnos las dos primeras filas. Seleccionamos el rango de caracteres que ocupa la columna que nos interesa, en este caso es la tercera y comprende desde el caracter 14 hasta el 34*¹. Posteriormente, añadimos `sort` y `uniq -c` para que ordene y cuente si hubiera algún nombre repetido.
 
-![numero de usuarios](https://user-images.githubusercontent.com/92091175/140276095-c21de86b-c401-4bcc-9ea7-7e65e72f3822.png)
+![numero de usuarios](https://user-images.githubusercontent.com/92091175/140292222-e0f5aa9c-78a2-4fd9-9c06-c8d2b65f2f72.png)
 
 Podemos añadir  después `wc -l` para saber el número de directorios existentes.
 
-`ls -l | cut -c 14-34 | sort | uniq -c | wc -l`
+`ls -l | tail -n+2 | cut -c 14-34 | sort | uniq -c | wc -l`
 
-Nos aparecen 35 usuarios diferentes.
+Nos aparecen 34 usuarios diferentes.
 
 *¹ Otra modo de seleccionar la tercera columna sería utilizar awk, de manera que el pipeline tendría esta estructura: 
-`ls -l | awk '{print $3}' | sort | uniq -c`. Se obtiene el mismo resultado.
+`ls -l | tail -n+2 | awk '{print $3}' | sort | uniq -c`. Se obtiene el mismo resultado.
 
 
