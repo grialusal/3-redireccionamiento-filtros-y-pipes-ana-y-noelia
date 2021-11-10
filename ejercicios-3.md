@@ -27,7 +27,7 @@ Trata ahora de ordenar este fichero de acuerdo a los siguientes criterios:
 
 ![sort 3](https://user-images.githubusercontent.com/92113066/140031772-58c93deb-ca7f-4efd-a53e-99fb10c3f8bd.png)
 
-
+COMENTARIO SANDRA-MIRIAM: El ejercicio esta bien resuelto y con toda la orden en comandos seguidos. Buen trabajo 2.5
 ## Ejercicio 2
 
 Cuáles son y cuántos tipos distintos de "features" hay en `Drosophila_melanogaster.BDGP6.28.102.gtf` y en `Homo_sapiens.GRCh38.102.gtf.gz`? Nota: para trabajar con ficheros .gunzip sin descomprimir puedes usar `zcat`.
@@ -49,6 +49,7 @@ Para trabajar con el archivo `Homo_sapiens.GRCh38.102.gtf.gz` podemos utilizar e
 
 ![features homo sapiens](https://user-images.githubusercontent.com/92091175/139583070-67c8e6fb-38fe-4338-962b-46d1b8a98473.png)
 
+COEMNTARIO SANDRA MIRIAM: Esta bien resuelto al trabajar con archivos pequeños, pero segun indica Alejandro en el momento que haya archivos enormes no nos podremos fijar detalladamente en el las columnas. Por lo que ellas no han utilizado comandos head y tail. Las ordenes finales de cortar, ordenar y colocar en orden decreciente lo han hecho perfectamente. siendo muy restrictos se les podria quitar 0.5 por la trampilla de mirar el archivo.PUNTUACION 2
 
 
 ## Ejercicio 3
@@ -67,6 +68,8 @@ En una sola línea, nuestro pipeline sería:
 `grep "^>" covid-samples.fasta | cut -c 1-11 | sort > ../negido/3-redireccionamiento-filtros-y-pipes-ana-y-noelia/covid-seq-names.txt`
 
 ![covid seq names](https://user-images.githubusercontent.com/92091175/139587940-c5b29e5b-e4bb-4d33-8a4f-781dc532b29c.png)
+
+COEMNTARIO SANDRA-MIRIAM: Al igual que en el ejercicio anterior se han contado los caracteres de cada linea para saber por donde habia que eliminar. Desconocian el uso de -d " " para obteenr el espacio en blanco. el comando ordenar es correcto PUNTUACION 2
 
 
 
@@ -90,3 +93,5 @@ Nos aparecen 34 usuarios diferentes.
 `ls -l | tail -n+2 | awk '{print $3}' | sort | uniq -c`. Se obtiene el mismo resultado.
 
 
+COMENTARIO SANDRA-MIRIAM: El ejercicio esta bien resuelto, aun sin utilizar el comando cut ya que han eliminado als dos primeras columnas con tail -n+2.
+Ademas las chicas lo han intentado resolver despues con awk, por utilizar otra estructura y tambien es correcto. PUNTUACION 2.5
